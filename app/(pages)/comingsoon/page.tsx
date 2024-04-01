@@ -43,7 +43,7 @@ const ComingSoon = () => {
         Coming Soon !!
       </div>
       <p ref={container2} className=" text-4xl text-yellow-400">
-        We're working on something awesome! Stay tuned...
+        We&apos;re working on something awesome! Stay tuned...
       </p>
     </div>
   );

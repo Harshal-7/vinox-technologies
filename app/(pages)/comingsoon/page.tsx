@@ -6,6 +6,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
+import { useRouter } from "next/navigation";
 
 const font = Lilita_One({
   subsets: ["latin"],
@@ -13,6 +14,15 @@ const font = Lilita_One({
 });
 
 const ComingSoon = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const { NODE_ENV } = process.env;
+    if (NODE_ENV !== "production") {
+      router.push("/");
+    }
+  }, []);
+
   const container1 = useRef(null);
   const container2 = useRef(null);
   gsap.registerPlugin(TextPlugin); // Register the TextPlugin

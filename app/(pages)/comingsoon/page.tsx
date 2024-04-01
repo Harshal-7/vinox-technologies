@@ -1,12 +1,12 @@
 "use client";
 
-import { Lilita_One } from "next/font/google";
-import { cn } from "@/lib/utils";
 import React, { useRef, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import { Lilita_One } from "next/font/google";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
-import { useRouter } from "next/navigation";
 
 const font = Lilita_One({
   subsets: ["latin"],
@@ -14,18 +14,9 @@ const font = Lilita_One({
 });
 
 const ComingSoon = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const { NODE_ENV } = process.env;
-    if (NODE_ENV !== "production") {
-      router.push("/");
-    }
-  }, []);
-
   const container1 = useRef(null);
   const container2 = useRef(null);
-  gsap.registerPlugin(TextPlugin); // Register the TextPlugin
+  gsap.registerPlugin(TextPlugin);
 
   useGSAP(() => {
     gsap.from(container1.current, {

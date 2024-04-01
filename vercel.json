@@ -1,0 +1,10 @@
+{
+  "rewrites": [],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/comingsoon",
+      "permanent": true
+    }
+  ]
+}

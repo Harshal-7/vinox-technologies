@@ -36,14 +36,20 @@ const ComingSoon = () => {
   return (
     <div
       className={cn(
-        "flex flex-col gap-10 items-center justify-center w-full h-screen bg-red-600",
+        "flex flex-col flex-wrap gap-10 items-center justify-center w-full h-screen bg-red-600",
         font.className
       )}
     >
-      <div ref={container1} className=" text-9xl font-bold text-yellow-400">
-        Coming Soon !!
+      <div
+        ref={container1}
+        className="text-7xl sm:text-9xl font-bold text-yellow-400 p-4 text-center"
+      >
+        Coming <br /> Soon !!
       </div>
-      <p ref={container2} className=" text-4xl text-yellow-400">
+      <p
+        ref={container2}
+        className="text-2xl md:text-4xl text-yellow-400 p-4 text-center"
+      >
         We&apos;re working on something awesome! Stay tuned...
       </p>
     </div>

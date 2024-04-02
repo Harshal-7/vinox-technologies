@@ -9,9 +9,9 @@ const font = Poppins({
 
 export const Logo = () => {
   return (
-    <div className="flex items-center gap-x-2 sm:mb-8">
+    <div className="flex items-center gap-x-2">
       {/* <Image src="/next.svg" alt="logo" width="60" height="60" /> */}
-      <p className={cn("font-semibold text-xl sm:text-3xl ", font.className)}>
+      <p className={cn("font-semibold text-sm sm:text-3xl", font.className)}>
         Vinox Technologies
       </p>
     </div>

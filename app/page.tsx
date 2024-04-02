@@ -3,7 +3,7 @@ import { Heading } from "./_components/heading";
 import { Heros } from "./_components/heros";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
-import { Introduction } from "./(pages)/_introduction/page";
+import { Introduction } from "./(pages)/introduction/Introduction";
 
 export default function Home() {
   return (

@@ -8,12 +8,12 @@ import { Introduction } from "./(pages)/introduction/Introduction";
 export default function Home() {
   return (
     <div className="min-h-full flex flex-col">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="flex flex-col items-center justify-center md:justify-start text-center gap-y-8 px-6 py-10">
         <Heading />
         <Introduction />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

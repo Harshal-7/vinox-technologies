@@ -22,37 +22,37 @@ export const Footer = () => {
           {/* Logo & Contact */}
           <div className="mb-5 flex flex-col gap-5 md:col-span-2">
             <Logo />
-            <div className="sm:mt-8 flex items-center gap-4 group hover:text-blue-600 transition duration-300">
+            <div className="sm:mt-8 flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
               <Phone className="w-4 h-4 inline-block" />
               <Link className="" href="tel:+912167265378">
                 {" "}
                 +91 2167-265378
-                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-blue-600"></span>
+                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>
 
-            <div className="flex items-center gap-4 group hover:text-blue-600 transition duration-300">
+            <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
               <Phone className="w-4 h-4 inline-block" />
               <Link href="tel:+919146203040">
                 {" "}
                 +91 914-620-3040
-                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-blue-600"></span>
+                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>
 
-            <div className="flex items-center gap-4 group hover:text-blue-600 transition duration-300">
+            <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
               <Mail className="w-4 h-4 inline-block " />
               <Link href="mailto:vinox.techn@gmail.com">
                 vinox.techn@gmail.com
-                <span className="block max-w-0 group-hover:max-w-48 transition-all duration-500 h-0.5 bg-blue-600"></span>
+                <span className="block max-w-0 group-hover:max-w-48 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>
 
-            <div className="flex items-center gap-4 group hover:text-blue-600 transition duration-300">
+            <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
               <MapPin className="w-4 h-4 inline-block " />
               <div>
                 Plot No B-146, MIDC, Wai Taluka, <br /> Wai, Maharashtra 412803.
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span>
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </div>
             </div>
           </div>
@@ -64,32 +64,32 @@ export const Footer = () => {
             </h4>
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Home
-              <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
             <Link
               href="/about"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> About Us
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
             <Link
               href="/products"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> Products
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
             <Link
               href="/contact"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> Contact
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
           </div>
 
@@ -101,56 +101,56 @@ export const Footer = () => {
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Scented Phenyl
-              <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Hand wash
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Dish wash
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Toilet cleaner
-              <span className="block max-w-0 group-hover:max-w-36 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-36 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Bathroom Cleaner
-              <span className="block max-w-0 group-hover:max-w-44 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-44 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
 
             <Link
               href="/"
-              className="group hover:text-blue-600 transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Floor cleaner
-              <span className="block max-w-0 group-hover:max-w-32 transition-all duration-500 h-0.5 bg-blue-600"></span>
+              <span className="block max-w-0 group-hover:max-w-32 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
           </div>
         </div>

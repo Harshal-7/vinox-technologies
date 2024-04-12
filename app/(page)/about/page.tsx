@@ -29,8 +29,6 @@ const About = () => {
               crafted to ensure optimum performance and effectiveness.
             </p>
             <br />
-
-            <br />
           </div>
 
           <div className=" flex-shrink-0">
@@ -42,7 +40,7 @@ const About = () => {
             Driven by a commitment to customer satisfaction, we conduct thorough
             research and development to continuously innovate and stay ahead of
             industry trends. Our dedicated team works tirelessly to understand
-            and fulfill our customers' needs, consistently exceeding
+            and fulfill our customer&apos;s needs, consistently exceeding
             expectations. Our core values revolve around product consistency,
             exceptional customer service, timely deliveries, and competitive
             pricing. With a focus on knowledge, technical innovation, and

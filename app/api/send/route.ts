@@ -188,34 +188,3 @@ export async function POST(request: NextRequest, response: NextResponse) {
     );
   }
 }
-
-// export async function POST(request: NextRequest, response: NextResponse) {
-//   try {
-//     const formData = await request.formData();
-
-//     const name = formData.get("name");
-//     const email = formData.get("email");
-//     const phoneNo = formData.get("phoneNo");
-//     const message = formData.get("message");
-
-//     const { data, error } = await resend.emails.send({
-//       from: `${email}`,
-//       to: "harshalshinde376@gmail.com",
-//       subject: "New submission to your contact form!",
-//       react: EmailTemplate({
-//         name: name as string,
-//         email: email as string,
-//         phoneNo: phoneNo as string,
-//         message: message as string,
-//       }) as React.ReactElement,
-//     });
-
-//     if (error) {
-//       return NextResponse.json({ MyEroor: error });
-//     }
-
-//     return NextResponse.json({ MyData: data });
-//   } catch (error) {
-//     return Response.json({ MyError: error });
-//   }
-// }

@@ -1,8 +1,28 @@
+"use client";
+
 import { Logo } from "./logo";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Mail, MapPin, Phone, PhoneCallIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Mail,
+  MapPin,
+  Phone,
+  PhoneCallIcon,
+  X,
+  Menu,
+  ChevronDown,
+} from "lucide-react";
 import Link from "next/link";
+
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -10,6 +30,12 @@ const font = Poppins({
 });
 
 export const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!setIsOpen);
+  };
+
   return (
     <div
       className={cn(
@@ -77,13 +103,51 @@ export const Footer = () => {
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> About Us
               <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
             </Link>
-            <Link
-              href="/products"
-              className="group hover:text-[#2563eb] transition duration-300"
+
+            <Collapsible
+              open={isOpen}
+              onOpenChange={setIsOpen}
+              className="w-full text-center space-y-2"
             >
-              <ArrowRight className="w-4 h-4 mr-3 inline-block" /> Products
-              <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
-            </Link>
+              <div className="flex items-start justify-start space-x-4">
+                <CollapsibleTrigger asChild>
+                  <Button variant="footer" className=" p-0">
+                    <ArrowRight className="w-4 h-4 mr-3 inline-block" />
+                    Products
+                  </Button>
+                </CollapsibleTrigger>
+              </div>
+              <CollapsibleContent className="space-y-2">
+                <div className="px-4 py-3">
+                  <Link
+                    onClick={toggleMenu}
+                    className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
+                    href="/products/homecare"
+                  >
+                    Home Care
+                  </Link>
+                </div>
+
+                <div className="px-4 py-3">
+                  <Link
+                    className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
+                    href="/products/autocare"
+                  >
+                    Auto Care
+                  </Link>
+                </div>
+
+                <div className="px-4 py-3">
+                  <Link
+                    className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
+                    href="/products/laundry"
+                  >
+                    Laundry
+                  </Link>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+
             <Link
               href="/contact"
               className="group hover:text-[#2563eb] transition duration-300"

@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/api/hello.tsx",
+    "app/(pages)/api/hello.tsx",
     "config/nodemailer.ts"
   ],
   "exclude": ["node_modules"]

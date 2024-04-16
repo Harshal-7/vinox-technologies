@@ -1,9 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { Introduction } from "../introduction/Introduction";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
 import Image from "next/image";
 
 const About = () => {

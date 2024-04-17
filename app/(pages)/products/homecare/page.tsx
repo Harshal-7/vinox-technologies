@@ -7,12 +7,12 @@ export default async function ProductsPage() {
   if (errMsg) return <h1>{errMsg}</h1>;
 
   return (
-    <div className="min-h-screen max-w-7xl m-auto mt-32 p-6 flex flex-col items-center gap-14">
+    <div className="min-h-screen max-w-7xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
       <div className="text-4xl md:text-5xl text-center w-full">
-        PRODUCT DETAILES
+        Product Details
       </div>
 
-      <div className="flex flex-row gap-10 flex-wrap mb-10 justify-center">
+      <div className="flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center">
         {products.map((product: any) => (
           <div key={product._id}>
             <ProductCard

@@ -1,8 +1,15 @@
 "use client";
 
-import { Poppins, Inconsolata } from "next/font/google";
+import { Poppins, Inconsolata, Yeseva_One } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Mail, MapPin, Phone, PhoneCallIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Mail,
+  MapPin,
+  Navigation,
+  Phone,
+  PhoneCallIcon,
+} from "lucide-react";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -17,9 +24,9 @@ const font1 = Poppins({
   weight: ["400", "600"],
 });
 
-const font2 = Inconsolata({
-  subsets: ["latin"],
-  weight: ["400", "600"],
+const font2 = Yeseva_One({
+  subsets: ["vietnamese"],
+  weight: ["400"],
 });
 
 const Contact = () => {
@@ -59,19 +66,19 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen max-w-6xl m-auto mt-32 md:mt-40 p-6">
-      <div
-        className={cn(
-          "flex flex-col md:flex-row justify-around gap-10 md:gap-20 ",
-          font1.className
-        )}
-      >
-        <div className="flex flex-col gap-5 justify-center">
+    <div
+      className={cn(
+        "min-h-screen max-w-6xl mx-auto flex flex-col mt-32 md:mt-40 p-6",
+        font1.className
+      )}
+    >
+      <div className="flex flex-col md:flex-row justify-around gap-12 md:gap-20">
+        <div className="flex flex-col gap-4 justify-center items-center">
           {/* leftside  */}
-          <div className="text-3xl md:text-5xl text-[#0b2670] font-semibold">
+          <div className="text-3xl md:text-5xl text-[#0b2670] font-bold">
             Contact Details
           </div>
-          <div className="flex flex-col justify-center items-start gap-6 text-sm md:text-xl">
+          <div className="flex flex-col justify-center items-start gap-4 text-sm md:text-xl ml-5 md:ml-0">
             <div className="sm:mt-8 flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
               <Phone className="w-4 h-4 md:w-6 md:h-6 inline-block" />
               <Link className="" href="tel:+912167265378">
@@ -80,15 +87,6 @@ const Contact = () => {
                 <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
               </Link>
             </div>
-
-            {/* <div className="flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
-              <Phone className="w-4 h-4 md:w-6 md:h-6 inline-block" />
-              <Link href="tel:+919146203040">
-                {" "}
-                +91 914-620-3040
-                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
-              </Link>
-            </div> */}
 
             <div className="flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
               <Mail className="w-4 h-4 md:w-6 md:h-6 inline-block " />
@@ -110,8 +108,8 @@ const Contact = () => {
         </div>
 
         {/* rightside  */}
-        <div className="flex flex-col gap-5 ">
-          <div className="text-2xl md:text-3xl mb-2 text-[#0b2670] font-semibold text-center">
+        <div className="flex flex-col gap-4 ">
+          <div className="text-3xl md:text-[2.5rem] mb-2 text-[#0b2670] font-semibold text-center">
             Send us message
           </div>
 
@@ -160,7 +158,7 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
-            <Button type="submit">
+            <Button variant="blue" type="submit">
               {isLoading ? (
                 <div role="status">
                   <svg
@@ -181,10 +179,29 @@ const Contact = () => {
                   </svg>
                 </div>
               ) : (
-                <div>Send</div>
+                <div className="font-semibold">Send</div>
               )}
             </Button>
           </form>
+        </div>
+      </div>
+
+      {/* Map  */}
+      <div className="flex flex-col gap-2 mx-auto mt-32 mb-5">
+        <Link
+          href="https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu"
+          target="_blank"
+          className="mr-5 text-2xl flex gap-2 items-center"
+        >
+          <div className="text-[#0b2670] font-semibold">Find Us</div>
+          <Navigation className="w-5 h-5 mt-1 fill-[#0b2670]  stroke-[#0b2670]" />
+        </Link>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.965221477262!2d73.88752457594467!3d17.98035498301152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc25cfff3c3a357%3A0x871e263619e7bc3c!2sVinox%20Technologies!5e0!3m2!1sen!2sin!4v1713358765545!5m2!1sen!2sin"
+            className="border w-[260px] h-[420px]  md:w-[900px] md:h-[580px]"
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>

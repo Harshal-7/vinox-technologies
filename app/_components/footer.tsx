@@ -12,6 +12,7 @@ import {
   X,
   Menu,
   ChevronDown,
+  CornerDownRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -48,20 +49,11 @@ export const Footer = () => {
           {/* Logo & Contact */}
           <div className="mb-5 flex flex-col gap-5 md:col-span-2">
             <Logo />
-            <div className="sm:mt-8 flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
+            <div className="mt-8 flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
               <Phone className="w-4 h-4 inline-block" />
               <Link className="" href="tel:+912167265378">
                 {" "}
-                +91 2167-265378
-                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-300">
-              <Phone className="w-4 h-4 inline-block" />
-              <Link href="tel:+919146203040">
-                {" "}
-                +91 914-620-3040
+                +91 216-726-5378
                 <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>
@@ -107,12 +99,12 @@ export const Footer = () => {
             <Collapsible
               open={isOpen}
               onOpenChange={setIsOpen}
-              className="w-full text-center space-y-2"
+              className="w-full space-y-2"
             >
               <div className="flex items-start justify-start space-x-4">
                 <CollapsibleTrigger asChild>
                   <Button variant="footer" className=" p-0">
-                    <ArrowRight className="w-4 h-4 mr-3 inline-block" />
+                    <CornerDownRight className="w-4 h-4 mr-3 inline-block" />
                     Products
                   </Button>
                 </CollapsibleTrigger>
@@ -124,6 +116,7 @@ export const Footer = () => {
                     className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
                     href="/products/homecare"
                   >
+                    <ArrowRight className="w-4 h-4 mr-3 inline-block" />
                     Home Care
                   </Link>
                 </div>
@@ -133,6 +126,7 @@ export const Footer = () => {
                     className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
                     href="/products/autocare"
                   >
+                    <ArrowRight className="w-4 h-4 mr-3 inline-block" />
                     Auto Care
                   </Link>
                 </div>
@@ -142,6 +136,7 @@ export const Footer = () => {
                     className=" hover:text-[#2563eb] hover:font-semibold transition-all duration-300"
                     href="/products/laundry"
                   >
+                    <ArrowRight className="w-4 h-4 mr-3 inline-block" />
                     Laundry
                   </Link>
                 </div>

@@ -96,7 +96,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Bottom Nav  */}
-      <div className="py-3 md:py-3 md:px-6">
+      <div className="pt-3 md:py-3 md:px-6">
         {/* Main Nav */}
         <div className="flex justify-between items-center h-10 list-none">
           <div className="ml-5 md:ml-20">
@@ -141,7 +141,7 @@ export const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Products</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[400px] ">
+                <ul className="grid gap-3 p-4 w-[330px] ">
                   {components.map((component) => (
                     <ListItem
                       key={component.title}
@@ -246,12 +246,13 @@ export const Navbar = () => {
               </Collapsible>
               <hr className="h-[0.5px] bg-black w-full" />
 
-              <li className="group hover:text-[#0b2670] hover:font-semibold transition-all duration-300">
+              <li className="group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center ">
                 <Link onClick={toggleMenu} href="/contact">
                   Contact
-                  <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670] pb-3"></span>
+                  <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
                 </Link>
               </li>
+              <hr className="h-[0.5px]" />
             </ul>
           </div>
         )}

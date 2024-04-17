@@ -21,7 +21,7 @@ export default async function ProductDetails({
   }
 
   return (
-    <div className="mt-32 flex justify-center items-center max-w-5xl m-auto p-5">
+    <div className="min-h-screen flex justify-center items-center max-w-5xl m-auto p-5">
       <div
         key={product._id}
         className="grid grid-cols-1 md:grid-cols-2 place-items-center md:place-items-start "

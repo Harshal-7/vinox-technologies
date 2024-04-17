@@ -21,7 +21,7 @@ const buttonVariants = cva(
         primary: "bg-[#0b2670] text-white",
         readMore: "bg-white text-[#0b2670] hover:font-semibold px-0",
         blue: "bg-[#0b2670] text-white hover:font-semibold transition-all duration-100",
-        nav: "bg-background text-black text-base hover:font-semibold hover:text-[#0b2670] focus:text-[#0b2670] transition-all duration-100",
+        nav: "bg-background text-black text-base font-normal hover:font-semibold hover:text-[#0b2670] focus:text-[#0b2670] transition-all duration-100",
         footer:
           "bg-black text-white text-base hover:font-semibold hover:text-[#2563eb] transition-all duration-300",
       },

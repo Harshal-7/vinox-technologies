@@ -82,7 +82,7 @@ export const Footer = () => {
             </h4>
             <Link
               href="/"
-              className="group hover:text-[#2563eb] transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300 py-2"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" />
               Home
@@ -90,7 +90,7 @@ export const Footer = () => {
             </Link>
             <Link
               href="/about"
-              className="group hover:text-[#2563eb] transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300 py-2"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> About Us
               <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
@@ -145,7 +145,7 @@ export const Footer = () => {
 
             <Link
               href="/contact"
-              className="group hover:text-[#2563eb] transition duration-300"
+              className="group hover:text-[#2563eb] transition duration-300 py-2"
             >
               <ArrowRight className="w-4 h-4 mr-3 inline-block" /> Contact
               <span className="block max-w-0 group-hover:max-w-28 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>

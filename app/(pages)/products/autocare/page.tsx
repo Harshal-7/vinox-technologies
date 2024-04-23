@@ -1,0 +1,61 @@
+import { ProductCard } from "@/app/_components/productCard";
+import { getProducts } from "@/_actions/postAction";
+import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { ProductListCard } from "@/app/_components/productListCard";
+import {
+  getAutocareProducts,
+  getHomecareProductsByCategory,
+} from "@/_actions/getProductByCategory";
+import { CldImage } from "next-cloudinary";
+import { ProductCloudImg } from "@/app/_components/productCloudImg";
+
+const title = "Auto Care";
+
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+export default async function AutocarePage() {
+  const { autocareProducts, errMsg } = await getAutocareProducts();
+
+  if (errMsg)
+    return (
+      <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
+    );
+
+  if (!autocareProducts) {
+    return (
+      <div className="mt-32 flex justify-center items-center p-5">
+        Loading...
+      </div>
+    ); // Render a loading indicator while fetching data
+  }
+
+  return (
+    <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
+      <div
+        className={cn(
+          "text-4xl md:text-5xl text-center w-full",
+          font.className
+        )}
+      >
+        {title}
+      </div>
+      {/* flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center */}
+      <div className="grid grid-cols-4 gap-10">
+        {autocareProducts.map((product: any, index: number) => (
+          <div key={index}>
+            <ProductListCard
+              title={product.name}
+              image_url={product.image_url}
+              href={product.href}
+              category={"autocare"}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

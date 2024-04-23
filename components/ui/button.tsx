@@ -23,7 +23,7 @@ const buttonVariants = cva(
         blue: "bg-[#0b2670] text-white hover:font-semibold transition-all duration-100",
         nav: "bg-background text-black text-base font-normal hover:font-semibold hover:text-[#0b2670] focus:text-[#0b2670] transition-all duration-100",
         footer:
-          "bg-black text-white text-base hover:font-semibold hover:text-[#2563eb] transition-all duration-300",
+          "bg-black text-white text-base transition-all duration-300 hover:text-[#2563eb] ",
       },
       size: {
         default: "h-10 px-4 py-2",

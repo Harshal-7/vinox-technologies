@@ -14,10 +14,11 @@ export const ProductCloudImg: React.FC<ProductCardProps> = ({ image_url }) => {
 
   return (
     <CldImage
-      width="350"
-      height="350"
+      width="220"
+      height="220"
       src={image_url}
       alt="Description of my image"
+      className="object-cover min-h-[350px] max-w-[350px] self-center"
     />
   );
 };

@@ -24,11 +24,6 @@ const font1 = Poppins({
   weight: ["400", "600"],
 });
 
-const font2 = Yeseva_One({
-  subsets: ["vietnamese"],
-  weight: ["400"],
-});
-
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,9 +67,9 @@ const Contact = () => {
         font1.className
       )}
     >
-      <div className="flex flex-col md:flex-row justify-around gap-12 md:gap-20">
-        <div className="flex flex-col gap-4 justify-center items-center">
-          {/* leftside  */}
+      <div className="flex flex-col md:flex-row justify-around gap-16 md:gap-20">
+        {/* leftside  */}
+        <div className="flex flex-col gap-8 justify-center items-center">
           <div className="text-3xl md:text-5xl text-[#0b2670] font-bold">
             Contact Details
           </div>
@@ -187,7 +182,7 @@ const Contact = () => {
       </div>
 
       {/* Map  */}
-      <div className="flex flex-col gap-2 mx-auto mt-32 mb-5">
+      <div className="flex flex-col gap-2 mx-auto mt-16 md:mt-32 mb-5">
         <Link
           href="https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu"
           target="_blank"

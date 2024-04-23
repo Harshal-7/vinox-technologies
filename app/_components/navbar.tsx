@@ -33,6 +33,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import { Poppins } from "next/font/google";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,6 +55,11 @@ const components: { title: string; href: string; description: string }[] = [
       "Make laundry day a breeze with our laundry products. Our detergents, fabric softeners, and stain removers are specially formulated to tackle tough stains and leave your clothes looking and feeling fresh and clean.",
   },
 ];
+
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -96,7 +102,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Bottom Nav  */}
-      <div className="pt-3 md:py-3 md:px-6">
+      <div className="py-3 md:py-3 md:px-6">
         {/* Main Nav */}
         <div className="flex justify-between items-center h-10 list-none">
           <div className="ml-5 md:ml-20">
@@ -173,7 +179,7 @@ export const Navbar = () => {
 
         {/* Hamburger Menu Nav */}
         {isMenuOpen && (
-          <div className="md:hidden w-full ">
+          <div className="md:hidden w-full">
             <ul className="flex flex-col gap-5 items-center">
               <hr className="h-[0.5px] bg-black w-full" />
               <li className="group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center ">
@@ -246,13 +252,12 @@ export const Navbar = () => {
               </Collapsible>
               <hr className="h-[0.5px] bg-black w-full" />
 
-              <li className="group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center ">
+              <li className="group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center pb-2">
                 <Link onClick={toggleMenu} href="/contact">
                   Contact
                   <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
                 </Link>
               </li>
-              <hr className="h-[0.5px]" />
             </ul>
           </div>
         )}
@@ -271,13 +276,15 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none group hover:text-[#0b2670] hover:font-semibold transition-all duration-500",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none hover:text-[#0b2670] hover:font-semibold transition-all duration-300",
             className
           )}
           {...props}
         >
-          <div className="text-sm leading-none font-semibold">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className={cn("leading-none font-semibold", font.className)}>
+            {title}
+          </div>
+          <p className="line-clamp-2 text-sm text-muted-foreground">
             {children}
           </p>
         </a>

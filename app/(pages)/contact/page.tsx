@@ -1,7 +1,7 @@
 "use client";
 
-import { Poppins, Inconsolata, Yeseva_One } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Poppins, Inconsolata, Yeseva_One } from "next/font/google";
 import {
   ArrowRight,
   Mail,
@@ -16,8 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useState } from "react";
-import axios from "axios";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Toast, ToastDescription, ToastProvider } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 
 const font1 = Poppins({
   subsets: ["latin"],
@@ -30,6 +30,8 @@ const Contact = () => {
   const [phoneNo, setPhoneNo] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const { toast } = useToast();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,6 +60,11 @@ const Contact = () => {
     setPhoneNo("");
     setMessage("");
     setIsLoading(false);
+    toast({
+      description: "Your message has been sent.",
+      duration: 3000,
+      variant: "vinoxToast",
+    });
   };
 
   return (
@@ -79,7 +86,6 @@ const Contact = () => {
               <Link className="" href="tel:+912167265378">
                 {" "}
                 216-726-5378
-                <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
               </Link>
             </div>
 
@@ -87,16 +93,14 @@ const Contact = () => {
               <Mail className="w-4 h-4 md:w-6 md:h-6 inline-block " />
               <Link href="mailto:vinox.techn@gmail.com">
                 vinox.techn@gmail.com
-                <span className="block max-w-0 group-hover:max-w-48 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
+            <div className="flex items-center gap-2 md:gap-4">
               <MapPin className="w-4 h-4 md:w-6 md:h-6 inline-block " />
               <div>
                 Plot No B-146, MIDC, Wai Taluka, <br /> Wai - 412803.
                 Maharashtra, India.
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
               </div>
             </div>
           </div>

@@ -1,16 +1,6 @@
-import { ProductCard } from "@/app/_components/productCard";
-import { getProducts } from "@/_actions/postAction";
-import { Poppins } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { ProductListCard } from "@/app/_components/productListCard";
 import { HomecareProductListCard } from "@/app/_components/homecareProductListCard";
 
 const title = "Home Care";
-
-const font = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-});
 
 const products = [
   {
@@ -62,14 +52,7 @@ export default async function HomecarePage() {
 
   return (
     <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
-      <div
-        className={cn(
-          "text-4xl md:text-5xl text-center w-full",
-          font.className
-        )}
-      >
-        {title}
-      </div>
+      <div className="text-4xl md:text-5xl text-center w-full">{title}</div>
 
       <div className="flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center">
         {products.map((product: any) => (

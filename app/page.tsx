@@ -14,7 +14,7 @@ const myFont = Poppins({
 
 export default function Home() {
   return (
-    <div className={cn("min-h-screen flex flex-col",myFont.className)}>
+    <div className={cn("min-h-screen flex flex-col")}>
       <Navbar />
       <div className="min-h-screen flex flex-col items-center justify-center md:justify-start text-center gap-y-8 px-6 py-10">
         <Heading />

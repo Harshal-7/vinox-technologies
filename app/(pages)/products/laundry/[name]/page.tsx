@@ -1,12 +1,12 @@
 import { ProductCloudImg } from "@/app/_components/productCloudImg";
-import { getAutocareProductsById } from "@/utils/getProductByCategory";
+import { getLaundryProductsById } from "@/utils/getProductByCategory";
 
 export default async function AutoCareProductList({
   params,
 }: {
   params: { name: string };
 }) {
-  const { autocareProductDetails, errMsg } = await getAutocareProductsById(
+  const { laundryProductDetails, errMsg } = await getLaundryProductsById(
     params.name
   );
 
@@ -15,7 +15,7 @@ export default async function AutoCareProductList({
       <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
     );
 
-  if (!autocareProductDetails) {
+  if (!laundryProductDetails) {
     return (
       <div className="mt-32 flex justify-center items-center p-5">
         Loading...
@@ -25,7 +25,7 @@ export default async function AutoCareProductList({
 
   return (
     <div className="">
-      {autocareProductDetails.map((product: any) => (
+      {laundryProductDetails.map((product: any) => (
         <div
           className="min-h-screen flex flex-col md:flex-row justify-center items-center max-w-5xl m-auto p-5"
           key={product._id}

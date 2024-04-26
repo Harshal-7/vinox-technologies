@@ -1,10 +1,6 @@
-import { getProductById } from "@/_actions/getById";
-import {
-  getHomecareProductsByCategory,
-  getHomecareProductsByCategoryAndId,
-} from "@/_actions/getProductByCategory";
 import { ProductCloudImg } from "@/app/_components/productCloudImg";
-getHomecareProductsByCategory;
+import { getHomecareProductsByCategoryAndId } from "@/utils/getProductByCategory";
+
 export default async function HomeCareProductDetails({
   params,
 }: {

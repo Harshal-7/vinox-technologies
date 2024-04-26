@@ -1,28 +1,28 @@
 import { ProductCard } from "@/app/_components/productCard";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { AutocareListCard } from "@/app/_components/autocareListCard";
 
 import { CldImage } from "next-cloudinary";
 import { ProductCloudImg } from "@/app/_components/productCloudImg";
-import { getAutocareProducts } from "@/utils/getProductByCategory";
+import { getLaundryProducts } from "@/utils/getProductByCategory";
+import { LaundryListCard } from "@/app/_components/laundryListCard";
 
-const title = "Auto Care";
+const title = "Laundry";
 
 const font = Poppins({
   subsets: ["latin"],
   weight: ["400", "600"],
 });
 
-export default async function AutocarePage() {
-  const { autocareProducts, errMsg } = await getAutocareProducts();
+export default async function LaundryPage() {
+  const { laundryProducts, errMsg } = await getLaundryProducts();
 
   if (errMsg)
     return (
       <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
     );
 
-  if (!autocareProducts) {
+  if (!laundryProducts) {
     return (
       <div className="mt-32 flex justify-center items-center p-5">
         Loading...
@@ -42,13 +42,13 @@ export default async function AutocarePage() {
       </div>
       {/* flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center */}
       <div className="grid grid-rows-1 lg:grid-cols-4 gap-10">
-        {autocareProducts.map((product: any, index: number) => (
+        {laundryProducts.map((product: any, index: number) => (
           <div key={index}>
-            <AutocareListCard
+            <LaundryListCard
               title={product.name}
               image_url={product.image_url}
               href={product.href}
-              category={"autocare"}
+              category={"laundry"}
             />
           </div>
         ))}

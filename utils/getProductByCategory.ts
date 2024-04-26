@@ -3,6 +3,7 @@
 import dbConnect from "@/lib/dbConnect";
 import Autocare from "@/models/Autocare";
 import Homecare from "@/models/Homecare";
+import Laundry from "@/models/Laundry";
 
 export async function getHomecareProductsByCategory(category: string) {
   try {
@@ -37,8 +38,6 @@ export async function getAutocareProducts() {
 
     const autocareProducts = await Autocare.find({});
 
-    // console.log("Autocare Products : ", autocareProducts);
-
     return { autocareProducts };
   } catch (error: any) {
     return { errMsg: error.message };
@@ -51,10 +50,31 @@ export async function getAutocareProductsById(id: any) {
 
     const autocareProductDetails = await Autocare.find({ href: id });
 
-    console.log("Autocare Products : ", autocareProductDetails);
-    
-
     return { autocareProductDetails };
+  } catch (error: any) {
+    return { errMsg: error.message };
+  }
+}
+
+export async function getLaundryProducts() {
+  try {
+    await dbConnect();
+
+    const laundryProducts = await Laundry.find({});
+
+    return { laundryProducts };
+  } catch (error: any) {
+    return { errMsg: error.message };
+  }
+}
+
+export async function getLaundryProductsById(id: any) {
+  try {
+    await dbConnect();
+
+    const laundryProductDetails = await Laundry.find({ href: id });
+
+    return { laundryProductDetails };
   } catch (error: any) {
     return { errMsg: error.message };
   }

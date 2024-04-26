@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-export interface Autocare extends mongoose.Document {
+export interface Laundry extends mongoose.Document {
   name: string;
   href: string;
   image_url: string;
   desc: string;
 }
 
-const AutocareSchema = new mongoose.Schema<Autocare>({
+const LaundrySchema = new mongoose.Schema<Laundry>({
   name: {
     type: String,
     required: [true, "Please provide a name for this product."],
@@ -25,5 +25,5 @@ const AutocareSchema = new mongoose.Schema<Autocare>({
   },
 });
 
-export default mongoose.models.Autocare ||
-  mongoose.model<Autocare>("Autocare", AutocareSchema);
+export default mongoose.models.Laundry ||
+  mongoose.model<Laundry>("Laundry", LaundrySchema);

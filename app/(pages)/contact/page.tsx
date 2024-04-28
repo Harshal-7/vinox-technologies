@@ -1,7 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { Poppins, Inconsolata, Yeseva_One } from "next/font/google";
 import {
   ArrowRight,
   Mail,
@@ -18,11 +16,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useState } from "react";
 import { Toast, ToastDescription, ToastProvider } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
-
-const font1 = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-});
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -68,12 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={cn(
-        "min-h-screen max-w-6xl mx-auto flex flex-col mt-32 md:mt-40 p-6",
-        font1.className
-      )}
-    >
+    <div className="min-h-screen max-w-6xl mx-auto mt-32 md:mt-40 p-6">
       <div className="flex flex-col md:flex-row justify-around gap-16 md:gap-20">
         {/* leftside  */}
         <div className="flex flex-col gap-8 justify-center items-center">
@@ -90,9 +78,42 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width={24}
+                height={24}
+                color={"#000000"}
+                fill={"none"}
+                className="w-4 h-4 md:w-6 md:h-6 inline-block"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12.8824 12C14.0519 12 15 13.0074 15 14.25C15 15.4926 14.0519 16.5 12.8824 16.5H10.4118C9.74625 16.5 9.4135 16.5 9.20675 16.2972C9 16.0945 9 15.7681 9 15.1154V12M12.8824 12C14.0519 12 15 10.9926 15 9.75C15 8.50736 14.0519 7.5 12.8824 7.5H10.4118C9.74625 7.5 9.4135 7.5 9.20675 7.70277C9 7.90554 9 8.2319 9 8.88462V12M12.8824 12H9"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <Link
+                href="https://wa.me/917057573040"
+                target="_blank"
+                className="flex flex-row"
+              >
+                7057573040
+              </Link>
+            </div>
+
+            <div className="flex items-center gap-2 md:gap-4 group hover:text-[#0b2670] transition duration-300">
               <Mail className="w-4 h-4 md:w-6 md:h-6 inline-block " />
-              <Link href="mailto:vinox.techn@gmail.com">
-                vinox.techn@gmail.com
+              <Link href="mailto:customercare@vinoxtechnologies.com">
+                customercare@vinoxtechnologies.com
               </Link>
             </div>
 
@@ -182,25 +203,6 @@ const Contact = () => {
               )}
             </Button>
           </form>
-        </div>
-      </div>
-
-      {/* Map  */}
-      <div className="flex flex-col gap-2 mx-auto mt-16 md:mt-32 mb-5">
-        <Link
-          href="https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu"
-          target="_blank"
-          className="mr-5 text-2xl flex gap-2 items-center"
-        >
-          <div className="text-[#0b2670] font-semibold">Find Us</div>
-          <Navigation className="w-5 h-5 mt-1 fill-[#0b2670]  stroke-[#0b2670]" />
-        </Link>
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.965221477262!2d73.88752457594467!3d17.98035498301152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc25cfff3c3a357%3A0x871e263619e7bc3c!2sVinox%20Technologies!5e0!3m2!1sen!2sin!4v1713358765545!5m2!1sen!2sin"
-            className="border w-[260px] h-[420px]  md:w-[900px] md:h-[580px]"
-            loading="lazy"
-          ></iframe>
         </div>
       </div>
     </div>

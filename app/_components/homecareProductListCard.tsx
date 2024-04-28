@@ -20,7 +20,11 @@ export const HomecareProductListCard: React.FC<
 > = ({ title, image_url, href, category }) => {
   return (
     <div className="min-h-96 flex flex-col border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
-      <img src={image_url} alt="img_url" className="w-[320px] h-[320px] object-cover"/>
+      <img
+        src={image_url}
+        alt="img_url"
+        className="w-[320px] h-[320px] object-cover"
+      />
       <div className="flex flex-col gap-5 md:gap-6 p-5 ">
         <p className="text-center text-xl md:text-xl ">{title}</p>
         <Link

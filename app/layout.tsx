@@ -12,15 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Vinox Technologies",
-  description: "vinox technologies, wai ",
-  icons: {
-    icon: [
-      {
-        url: "/Logo.jpg",
-        href: "/Logo.jpg",
-      },
-    ],
-  },
+  description: "Vinox Technologies, Wai, Maharashtra",
 };
 
 export default function RootLayout({
@@ -30,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/jpg"
+          sizes="32x32"
+        />
+      </head>
       <body className={inter.className}>
         {children}
         <Toaster />

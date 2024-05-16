@@ -7,7 +7,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="">
       {children}
       <Navbar />
       <Footer />

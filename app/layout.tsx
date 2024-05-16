@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -30,7 +31,7 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body className={inter.className}>
+      <body className={cn("",inter.className)}>
         {children}
         <Toaster />
         <Analytics />

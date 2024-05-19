@@ -1,3 +1,5 @@
+"use client";
+
 import { ProductCard } from "@/app/_components/productCard";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";

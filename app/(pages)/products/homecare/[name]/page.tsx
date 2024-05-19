@@ -1,5 +1,3 @@
-"use client";
-
 import { ProductCard } from "@/app/_components/productCard";
 import { ProductCloudImg } from "@/app/_components/productCloudImg";
 import { cn } from "@/lib/utils";

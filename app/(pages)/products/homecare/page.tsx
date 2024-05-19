@@ -1,5 +1,3 @@
-"use client";
-
 import { HomecareProductListCard } from "@/app/_components/homecareProductListCard";
 
 const title = "Home Care";

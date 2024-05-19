@@ -52,7 +52,7 @@ const ComingSoon = () => {
       >
         We&apos;re working on something awesome! Stay tuned...
       </p>
-    </div>
+    </div>  
   );
 };
 

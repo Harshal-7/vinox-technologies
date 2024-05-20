@@ -178,12 +178,13 @@ export const Navbar = () => {
       <div className="py-3 md:py-3 md:px-6 text-black">
         {/* Main Nav */}
         <div className="flex justify-between items-center list-none">
-          <div className="ml-5 md:ml-20">
-            <img src="/Logo.jpg" alt="logo" className="w-16 md:w-20" />
-          </div>
-
-          {/* HAMBURGER-MENU */}
-
+          <Button className="ml-5 md:ml-20 p-0" variant="link">
+            <Link href="/">
+              {" "}
+              <img src="/Logo.jpg" alt="logo" className="w-16 md:w-20" />
+            </Link>
+          </Button>
+          <Link href="/"></Link>
           {isMenuOpen ? (
             <X onClick={toggleMenu} className="mr-5 w-4 h-4 md:hidden " />
           ) : (
@@ -253,7 +254,7 @@ export const Navbar = () => {
 
         {/* Hamburger Menu Nav */}
         {isMenuOpen && (
-          <div className="md:hidden w-full max-w-sm h-screen mt-5">
+          <div className="md:hidden w-full max-w-sm h-screen mt-5 font-semibold">
             <ul className="flex flex-col gap-5 items-center justify-center">
               <hr className="h-[0.5px] bg-black w-full" />
               <li className="py-2 group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center ">
@@ -278,7 +279,7 @@ export const Navbar = () => {
               >
                 <div className="flex items-center justify-center space-x-4 px-4">
                   <CollapsibleTrigger asChild>
-                    <Button variant="nav" className="w-full p-0">
+                    <Button variant="nav" className="w-full p-0 font-semibold">
                       Products
                       <ChevronDown
                         className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"

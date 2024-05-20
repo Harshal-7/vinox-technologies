@@ -25,9 +25,12 @@ export default async function HomeCareProductDetails({
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center max-w-5xl m-auto p-5">
+    <div className="">
       {homecareProducts.map((product: any) => (
-        <div key={product._id}>
+        <div
+          className="min-h-screen flex flex-col md:flex-row justify-center items-center max-w-5xl m-auto p-5"
+          key={product._id}
+        >
           <h5 className="block md:hidden text-3xl font-bold text-center">
             {product.name}
           </h5>

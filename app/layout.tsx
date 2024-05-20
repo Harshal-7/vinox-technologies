@@ -32,24 +32,11 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body className={cn("", inter.className)}>
+      <body className={cn("")}>
         {children}
         <Toaster />
         <Analytics />
       </body>
     </html>
   );
-}
-
-{
-  /* <ThemeProvider
-  attribute="class"
-  defaultTheme="system"
-  enableSystem
-  disableTransitionOnChange
->
-  {children}
-  <Toaster />
-  <Analytics />
-</ThemeProvider>; */
 }

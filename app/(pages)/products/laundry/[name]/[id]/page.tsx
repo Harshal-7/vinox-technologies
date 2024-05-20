@@ -25,7 +25,6 @@ export default async function AutoCareProductDetails({
 
   return (
     <div className="min-h-screen flex justify-center items-center max-w-5xl m-auto p-5">
-      <div className="mt-44 text-3xl">INSIDE</div>
       {laundryProductDetails.map((product: any) => (
         <div key={product._id}>
           <h5 className="block md:hidden text-3xl font-bold text-center">

@@ -47,13 +47,13 @@ const OurClient = () => {
             align: "start",
             loop: true,
           }}
-          className="max-w-2xl lg:max-w-6xl "
+          className="max-w-sm lg:max-w-6xl "
         >
           <CarouselContent>
             {myArray.map((items, index) => (
               <CarouselItem
                 key={index}
-                className="basis-1/3 md:basis-1/6 ease-linear	`"
+                className="basis-1/2 md:basis-1/6 ease-linear"
               >
                 <div className="p-1">
                   <Card>
@@ -66,7 +66,7 @@ const OurClient = () => {
             ))}
           </CarouselContent>
           <CarouselPrevious />
-          <CarouselNext />
+          <CarouselNext className="hidden md:block" />
         </Carousel>
       </div>
     </div>

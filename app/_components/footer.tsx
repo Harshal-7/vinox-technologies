@@ -40,9 +40,8 @@ export const Footer = () => {
             <Logo />
             <div className="mt-2 md:mt-11 flex items-center gap-4 group hover:text-[#2563eb] transition duration-500">
               <Phone className="w-5 h-5 inline-block" />
-              <Link className="" href="tel:+912167265378">
-                {" "}
-                216-726-5378
+              <Link className="" href="tel:02167295095">
+                02167-295095
                 <span className="block max-w-0 group-hover:max-w-40 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>
@@ -84,7 +83,7 @@ export const Footer = () => {
             <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-500">
               <Mail className="w-5 h-5 inline-block " />
               <Link href="mailto:customercare@vinoxtechnologies.com">
-                customercare@vinoxtechnologies.com
+                customercare
                 <span className="block max-w-0 group-hover:max-w-48 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>

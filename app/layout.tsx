@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -31,11 +32,24 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body className={cn("",inter.className)}>
+      <body className={cn("", inter.className)}>
         {children}
         <Toaster />
         <Analytics />
       </body>
     </html>
   );
+}
+
+{
+  /* <ThemeProvider
+  attribute="class"
+  defaultTheme="system"
+  enableSystem
+  disableTransitionOnChange
+>
+  {children}
+  <Toaster />
+  <Analytics />
+</ThemeProvider>; */
 }

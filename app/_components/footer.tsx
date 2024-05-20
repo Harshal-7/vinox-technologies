@@ -80,10 +80,10 @@ export const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex items-center gap-4 group hover:text-[#2563eb] transition duration-500">
+            <div className="flexs items-center gap-4 group hover:text-[#2563eb] transition duration-500">
               <Mail className="w-5 h-5 inline-block " />
               <Link href="mailto:customercare@vinoxtechnologies.com">
-                customercare
+                customercare@vinoxtechnologies.com
                 <span className="block max-w-0 group-hover:max-w-48 transition-all duration-500 h-0.5 bg-[#2563eb]"></span>
               </Link>
             </div>

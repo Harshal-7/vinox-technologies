@@ -47,6 +47,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 import { Poppins } from "next/font/google";
+import { FaWhatsapp } from "react-icons/fa";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -87,12 +88,6 @@ export const Navbar = () => {
 
   const isActive = (href: any) => pathname === href;
 
-  const [goal, setGoal] = React.useState(350);
-
-  function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)));
-  }
-
   return (
     <div
       className={cn(
@@ -120,6 +115,7 @@ export const Navbar = () => {
               <Link href="tel:02167295095"> 02167-295-095</Link>
             </div>
           </li>
+
           <li className="hidden md:block">
             <div className="flex items-center justify-center gap-4">
               <Link

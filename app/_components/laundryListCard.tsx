@@ -27,7 +27,7 @@ export const LaundryListCard: React.FC<LaundryListCardProps> = ({
     <div className="min-h-96 flex flex-col border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
       <ProductCloudImg image_url={image_url} />
       <div className="flex flex-col gap-5 md:gap-6 p-5 px-16 lg:px-20">
-        <p className="text-center text-xl md:text-xl ">{title}</p>
+        <p className="text-center text-xl md:text-xl font-semibold">{title}</p>
         <Link
           href={`/products/${category}/${href}`}
           className="w-32 md:w-40 self-center "

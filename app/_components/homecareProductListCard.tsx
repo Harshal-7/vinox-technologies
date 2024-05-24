@@ -28,7 +28,7 @@ export const HomecareProductListCard: React.FC<
         className="w-[320px] h-[320px] object-cover"
       />
       <div className="flex flex-col gap-5 md:gap-6 p-5 ">
-        <p className="text-center text-xl md:text-xl ">{title}</p>
+        <p className="text-center text-xl md:text-xl font-semibold">{title}</p>
         <Link
           href={`/products/${category}/${href}`}
           className="w-32 md:w-40 self-center "

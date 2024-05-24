@@ -9,11 +9,6 @@ import { LaundryListCard } from "@/app/_components/laundryListCard";
 
 const title = "Laundry";
 
-const font = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-});
-
 export default async function LaundryPage() {
   const { laundryProducts, errMsg } = await getLaundryProducts();
 
@@ -33,10 +28,7 @@ export default async function LaundryPage() {
   return (
     <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
       <div
-        className={cn(
-          "text-4xl md:text-5xl text-center w-full",
-          font.className
-        )}
+        className={cn("text-4xl md:text-5xl text-center w-full font-semibold")}
       >
         {title}
       </div>

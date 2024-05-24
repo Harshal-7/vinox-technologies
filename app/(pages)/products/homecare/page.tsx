@@ -52,7 +52,7 @@ export default async function HomecarePage() {
 
   return (
     <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
-      <div className="text-4xl md:text-5xl text-center w-full">{title}</div>
+      <div className="text-4xl md:text-5xl text-center w-full font-semibold">{title}</div>
 
       <div className="flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center">
         {products.map((product: any) => (

@@ -12,12 +12,15 @@ import {
 import { Loader2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const ProductsInfo = () => {
   const [homecareIsLoading, setHomecareIsLoading] = useState(false);
   const [autocareIsLoading, setAutocareIsLoading] = useState(false);
   const [laundryIsLoading, setLaundryIsLoading] = useState(false);
+
+  const router = useRouter();
 
   return (
     <div className="mt-10 w-full bg-gradient-to-bl from-blue-800 to-blue-950 text-white flex flex-col justify-center items-center py-10">
@@ -45,10 +48,13 @@ const ProductsInfo = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => setHomecareIsLoading(true)}
+                onClick={() => {
+                  router.push("/products/homecare");
+                  setHomecareIsLoading(true);
+                }}
                 variant="secondary"
               >
-                <Link href="/products/homecare">Show All Products</Link>
+                Show All Products
               </Button>
             )}
           </CardFooter>
@@ -76,10 +82,13 @@ const ProductsInfo = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => setAutocareIsLoading(true)}
+                onClick={() => {
+                  router.push("/products/autocare");
+                  setAutocareIsLoading(true);
+                }}
                 variant="secondary"
               >
-                <Link href="/products/autocare">Show All Products</Link>
+                Show All Products
               </Button>
             )}
           </CardFooter>
@@ -107,10 +116,13 @@ const ProductsInfo = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => setLaundryIsLoading(true)}
+                onClick={() => {
+                  router.push("/products/laundry");
+                  setLaundryIsLoading(true);
+                }}
                 variant="secondary"
               >
-                <Link href="/products/laundry">Show All Products</Link>
+                Show All Products
               </Button>
             )}
           </CardFooter>

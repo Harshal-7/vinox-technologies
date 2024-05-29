@@ -13,8 +13,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Vinox Technologies",
-  description: "Vinox Technologies, Wai, Maharashtra",
+  title: "Vinox Technologies | Specialty Chemicals Manufacturer",
+  description:
+    "Vinox Technologies - Leading manufacturer of specialty chemicals for industrial cleaning. Serving HORECA, Dairy & Food, Institutional Cleaning, and Hospitality sectors.",
 };
 
 export default function RootLayout({

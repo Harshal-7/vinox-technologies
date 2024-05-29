@@ -37,6 +37,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Poppins } from "next/font/google";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Separator } from "@/components/ui/separator";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -213,23 +214,27 @@ export const Navbar = () => {
 
         {/* Hamburger Menu Nav */}
         {isMenuOpen && (
-          <div className="md:hidden w-full max-w-sm h-screen mt-5 font-semibold">
+          <div className="md:hidden w-full h-screen mt-5 font-semibold">
             <ul className="flex flex-col gap-5 items-center justify-center">
-              <hr className="h-[0.5px] bg-black w-full" />
+              <Separator />
+
               <li className="py-2 group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center ">
                 <Link onClick={toggleMenu} href="/">
                   Home
                   <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
                 </Link>
               </li>
-              <hr className="h-[0.5px] bg-black w-full" />
+
+              <Separator />
+
               <li className="py-2 group hover:text-[#0b2670] hover:font-semibold transition-all duration-300">
                 <Link onClick={toggleMenu} href="/about">
                   About
                   <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
                 </Link>
               </li>
-              <hr className="h-[0.5px] bg-black w-full" />
+
+              <Separator />
 
               <Collapsible
                 open={isOpen}
@@ -251,7 +256,7 @@ export const Navbar = () => {
                 <CollapsibleContent className="space-y-2">
                   <hr className="h-[0.5px] bg-black w-full" />
 
-                  <div className="px-4 py-3">
+                  <div className="px-4 py-3 pt-5 pb-5">
                     <Link
                       onClick={toggleMenu}
                       className=" hover:text-[#0b2670] hover:font-semibold transition-all duration-300"
@@ -262,7 +267,7 @@ export const Navbar = () => {
                   </div>
                   <hr className="h-[0.5px] bg-black w-full" />
 
-                  <div className="px-4 py-3">
+                  <div className="px-1 py-3 pt-5 pb-5">
                     <Link
                       onClick={toggleMenu}
                       className=" hover:text-[#0b2670] hover:font-semibold transition-all duration-300"
@@ -273,7 +278,7 @@ export const Navbar = () => {
                   </div>
                   <hr className="h-[0.5px] bg-black w-full" />
 
-                  <div className="px-4 py-3">
+                  <div className="px-4 py-3 pt-5">
                     <Link
                       onClick={toggleMenu}
                       className=" hover:text-[#0b2670] hover:font-semibold transition-all duration-300"
@@ -285,7 +290,8 @@ export const Navbar = () => {
                   {/* <hr className="h-[0.5px] bg-black w-full" /> */}
                 </CollapsibleContent>
               </Collapsible>
-              <hr className="h-[0.5px] bg-black w-full" />
+
+              <Separator className="" />
 
               <li className="py-2 group hover:text-[#0b2670] hover:font-semibold transition-all duration-300 self-center pb-2">
                 <Link onClick={toggleMenu} href="/contact">
@@ -293,7 +299,7 @@ export const Navbar = () => {
                   <span className="block max-w-0 group-hover:max-w-20 transition-all duration-500 h-0.5 bg-[#0b2670]"></span>
                 </Link>
               </li>
-              <hr className="h-[0.5px] bg-black w-full" />
+              <Separator />
             </ul>
           </div>
         )}

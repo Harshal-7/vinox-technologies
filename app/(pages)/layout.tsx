@@ -8,8 +8,8 @@ export default function PageLayout({
 }) {
   return (
     <div className="">
-      {children}
       <Navbar />
+      {children}
       <Footer />
     </div>
   );

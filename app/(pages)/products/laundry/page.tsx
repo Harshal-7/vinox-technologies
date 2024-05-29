@@ -27,11 +27,20 @@ export default async function LaundryPage() {
 
   return (
     <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
-      <div
-        className={cn("text-4xl md:text-5xl text-center w-full font-semibold")}
-      >
-        {title}
+      <div className="text-4xl relative h-32 md:h-72 md:text-5xl text-center w-full font-semibold">
+        <div className="">
+          <div className="bg-black h-32 md:h-72"></div>
+          <img
+            src="/lc-4.jpg"
+            alt="laundry.jpg"
+            className="absolute top-0 opacity-60 h-32 md:h-72 w-full object-cover"
+          />
+        </div>
+        <p className="text-white absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
+          {title}
+        </p>
       </div>
+
       {/* flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center */}
       <div className="grid grid-rows-1 lg:grid-cols-4 gap-10">
         {laundryProducts.map((product: any, index: number) => (

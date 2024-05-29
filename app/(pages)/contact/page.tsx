@@ -77,7 +77,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-6xl mx-auto mt-32 md:mt-40 p-6">
+    <div className="min-h-screen max-w-screen-2xl mx-auto mt-28 md:mt-32 p-6">
+      <div className="text-3xl relative h-32 md:h-72 md:text-5xl text-center w-full font-semibold mb-10">
+        <div className="">
+          <div className="bg-black h-32 md:h-72 rounded-lg"></div>
+          <img
+            src="/contactus-1.jpg"
+            alt="contactus-1.jpg"
+            className="absolute top-0 opacity-70 h-32 md:h-72 w-full object-cover rounded-lg"
+          />
+        </div>
+        <p className="text-white absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
+          Contact Us
+        </p>
+      </div>
+
       <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32 relative">
         {/* leftside  */}
         <div className="flex flex-col gap-8 justify-center items-center">

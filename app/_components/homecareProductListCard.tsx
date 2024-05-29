@@ -7,6 +7,7 @@ import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCloudImg } from "./productCloudImg";
+import { motion } from "framer-motion";
 
 interface HomecareProductListCardProps {
   title: string;
@@ -21,22 +22,27 @@ export const HomecareProductListCard: React.FC<
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div className="min-h-96 flex flex-col border  rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="md:min-h-96 flex flex-col"
+    >
       <img
         src={image_url}
         alt="img_url"
-        className="w-[320px] h-[320px] object-cover"
+        className="w-[200px] h-[200px] md:w-[330px] md:h-[330px] object-cover rounded-sm md:rounded-md"
       />
-      <div className="flex flex-col gap-5 md:gap-6 p-5 ">
-        <p className="text-center text-xl md:text-xl font-semibold">{title}</p>
+      <div className="flex flex-col gap-3 md:gap-6 py-3 md:p-5 ">
+        <p className="text-center text-xl md:text-2xl font-semibold text-[#0b2670]">
+          {title}
+        </p>
         <Link
           href={`/products/${category}/${href}`}
-          className="w-32 md:w-40 self-center "
+          className="md:w-40 self-center"
         >
           <Button
             variant="blue"
             type="submit"
-            className="w-32 md:w-40 self-center"
+            className="h-8 md:h-11 rounded-md px-3 md:px-8 text-xs md:text-base md:w-40 self-center"
             onClick={() => setIsLoading(true)}
           >
             {isLoading ? (
@@ -64,6 +70,6 @@ export const HomecareProductListCard: React.FC<
           </Button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

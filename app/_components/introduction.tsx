@@ -8,7 +8,7 @@ import Link from "next/link";
 export const Introduction = () => {
   return (
     <div className="px-4 py-2 max-w-6xl">
-      <div className="hidden md:flex gap-5">
+      <div className="hidden lg:flex gap-5">
         {/* left-info  */}
         <div className="flex flex-col text-start">
           <p className="">
@@ -37,13 +37,18 @@ export const Introduction = () => {
         </div>
 
         {/* banner info  */}
-        <div className=" flex-shrink-0">
-          <Image src="/hero01.jpg" alt="banner" width={500} height={500} />
+        <div className="flex-shrink-0">
+          <Image
+            src="/hero01.jpg"
+            alt="Vinox Technologies - Specialty Chemicals for Industrial Cleaning"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
 
       {/* for mobile devices */}
-      <div className="flex flex-col items-center gap-8 md:hidden">
+      <div className="flex flex-col items-center gap-8 lg:hidden">
         <div className="flex-shrink-0">
           <Image src="/hero01.jpg" alt="banner" width={300} height={300} />
         </div>

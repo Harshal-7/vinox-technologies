@@ -7,6 +7,7 @@ import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCloudImg } from "./productCloudImg";
+import { motion } from "framer-motion";
 
 interface AutocareListCardProps {
   title: string;
@@ -24,10 +25,13 @@ export const AutocareListCard: React.FC<AutocareListCardProps> = ({
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div className="min-h-96 flex flex-col border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="min-h-96 flex flex-col border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]"
+    >
       <ProductCloudImg image_url={image_url} />
       <div className="flex flex-col gap-5 md:gap-6 p-5">
-        <p className="text-center text-xl md:text-xl font-semibold">
+        <p className="text-center text-xl md:text-xl font-semibold text-[#0b2670]">
           {title}
         </p>
         <Link
@@ -65,6 +69,6 @@ export const AutocareListCard: React.FC<AutocareListCardProps> = ({
           </Button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CldImage } from "next-cloudinary";
+import { motion } from "framer-motion";
 
 interface ProductCardProps {
   name: string;
@@ -27,7 +28,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center gap-5 md:gap-6 p-5 md:p-6 border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="flex flex-col items-center gap-5 md:gap-6 p-5 md:p-6 border rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]"
+    >
       <CldImage
         width="220"
         height="220"
@@ -36,7 +40,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         className="object-cover min-h-[330px] self-center"
       />
 
-      <p className="text-center text-xl md:text-2xl ">{name}</p>
+      <p className="text-center text-xl md:text-2xl font-semibold text-[#0b2670]">
+        {name}
+      </p>
 
       <Button
         variant="blue"
@@ -67,6 +73,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <div> View Details </div>
         )}
       </Button>
-    </div>
+    </motion.div>
   );
 };

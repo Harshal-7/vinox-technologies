@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductCloudImg } from "./productCloudImg";
 import { motion } from "framer-motion";
 
 interface HomecareProductListCardProps {
@@ -20,22 +19,35 @@ export const HomecareProductListCard: React.FC<
   HomecareProductListCardProps
 > = ({ title, image_url, href, category }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="md:min-h-96 flex flex-col"
+      className="md:min-h-96 flex flex-col cursor-pointer"
     >
-      <img
+      <CldImage
+        key={image_url}
         src={image_url}
-        alt="img_url"
+        alt={image_url}
+        width={330}
+        height={330}
         className="w-[200px] h-[200px] md:w-[330px] md:h-[330px] object-cover rounded-sm md:rounded-md"
+        onClick={() => router.push(`/products/${category}/${href}`)}
       />
-      <div className="flex flex-col gap-3 md:gap-6 py-3 md:p-5 ">
-        <p className="text-center text-xl md:text-2xl font-semibold text-[#0b2670]">
+
+      <div
+        className="flex flex-col gap-3 md:gap-6 py-3 md:p-5 "
+        onClick={() => router.push(`/products/${category}/${href}`)}
+        key={title}
+      >
+        <p
+          className="text-center text-xl md:text-2xl font-semibold text-[#0b2670]"
+          key={title}
+        >
           {title}
         </p>
-        <Link
+        {/* <Link
           href={`/products/${category}/${href}`}
           className="md:w-40 self-center"
         >
@@ -68,7 +80,7 @@ export const HomecareProductListCard: React.FC<
               <div>View Products</div>
             )}
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </motion.div>
   );

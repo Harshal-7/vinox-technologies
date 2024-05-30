@@ -1,55 +1,58 @@
 import { HomecareProductListCard } from "@/app/_components/homecareProductListCard";
 import { Separator } from "@/components/ui/separator";
+import { getProductsCategory } from "@/utils/productCategory";
 
 const title = "Home Care";
 
 const products = [
   {
     title: "Handawsh",
-    image_url: "/hw-3.jpg",
+    image_url: "homecare/yjiupjdymnqwclluphjs",
     href: "handwash",
   },
   {
     title: "Kitchen Care",
-    image_url: "/kc-1.jpg",
+    image_url: "homecare/b8es7a5vdah4m1yy6x4k",
     href: "kitchenCare",
   },
   {
     title: "Glass Cleaner",
-    image_url: "/gc-2.jpg",
+    image_url: "homecare/jkkuqu8pclelbk7k6qog",
     href: "glassCleaner",
   },
   {
     title: "Floor Cleaner",
-    image_url: "/floorCleaner.jpg",
+    image_url: "homecare/yzccbb1au0phx7fwacst",
     href: "floorCleaner",
   },
   {
     title: "Furniture Care",
-    image_url: "/furnitureCare.jpg",
+    image_url: "homecare/lv5nhhhhbtrewcydobr3",
     href: "furnitureCare",
   },
   {
     title: "Room Freshners",
-    image_url: "/rf-1.jpg",
+    image_url: "homecare/tbxx5rin1jhq0p3yrd2s",
     href: "roomFreshners",
   },
   {
     title: "Bathroom Cleaner",
-    image_url: "/bc-2.jpg",
+    image_url: "homecare/pbuuz9yhdbltvv8hr2kr",
     href: "bathroomCleaner",
   },
   {
-    title: "Washroom Cleaner",
-    image_url: "/tc-1.jpg",
-    href: "washroomCleaner",
+    title: "Toilet Cleaner",
+    image_url: "homecare/i4fhrmhyawct0a8rxlfl",
+    href: "toiletCleaner",
   },
 ];
 
 export default async function HomecarePage() {
-  // const { products, errMsg } = await getProducts();
+  const { products, errMsg } = await getProductsCategory();
 
-  // if (errMsg) return <h1>{errMsg}</h1>;
+  if (errMsg) return <h1>{errMsg}</h1>;
+
+  if (!products) return <h1>error fetching products</h1>;
 
   return (
     <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">

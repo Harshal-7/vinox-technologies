@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="min-h-screen max-w-6xl mx-auto ">
       {/* Content  */}
-      <div className="flex flex-col gap-5 mt-24 md:mt-32">
+      <div className="flex flex-col gap-5">
         {/* Introduction  */}
         <div className="grid md:grid-cols-2 px-5 py-2 ">
           <div>

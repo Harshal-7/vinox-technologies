@@ -11,21 +11,17 @@ export default async function AutoCareProductDetails({
   );
 
   if (errMsg)
-    return (
-      <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
-    );
+    return <h1 className="flex justify-center items-center p-5">{errMsg}</h1>;
 
   if (!autocareProductDetails) {
     return (
-      <div className="mt-32 flex justify-center items-center p-5">
-        Loading...
-      </div>
+      <div className="flex justify-center items-center p-5">Loading...</div>
     ); // Render a loading indicator while fetching data
   }
 
   return (
     <div className="min-h-screen flex justify-center items-center max-w-5xl m-auto p-5">
-      <div className="mt-44 text-3xl">INSIDE</div>
+      <div className="text-3xl">INSIDE</div>
       {autocareProductDetails.map((product: any) => (
         <div key={product._id}>
           <h5 className="block md:hidden text-3xl font-bold text-center">

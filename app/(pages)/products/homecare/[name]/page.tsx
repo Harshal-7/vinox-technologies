@@ -20,15 +20,11 @@ export default async function HomeCareProductList({
   );
 
   if (errMsg)
-    return (
-      <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
-    );
+    return <h1 className="flex justify-center items-center p-5">{errMsg}</h1>;
 
   if (!homecareProducts) {
     return (
-      <div className="mt-32 flex justify-center items-center p-5">
-        Loading...
-      </div>
+      <div className="flex justify-center items-center p-5">Loading...</div>
     ); // Render a loading indicator while fetching data
   }
 
@@ -54,7 +50,7 @@ export default async function HomeCareProductList({
   }
 
   return (
-    <div className="min-h-screen max-w-7xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
+    <div className="min-h-screen max-w-7xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14">
       <div className="grid grid-rows-1 lg:grid-cols-3 gap-10">
         {homecareProducts.map((product: any) => (
           <div key={product._id}>

@@ -61,7 +61,8 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export const Navbar = () => {
-  const scrolled = useScrollTop();
+  const scrollPosition = useScrollTop();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -75,10 +76,11 @@ export const Navbar = () => {
 
   return (
     <div
-      className={cn(
-        "z-50 bg-background fixed top-0 items-center w-full border-b shadow-sm",
-        scrolled && "border-b shadow-sm"
-      )}
+      className={`sticky top-0 z-[100] transition-shadow items-center w-full ${
+        scrollPosition > 0
+          ? "shadow-none"
+          : "shadow-sm bg-opacity-70 backdrop-blur-lg backdrop-filter"
+      }`}
     >
       {/* Top Nav  */}
       <nav className="bg-[#0b2670] text-white py-3 px-3 md:py-3 md:px-28">

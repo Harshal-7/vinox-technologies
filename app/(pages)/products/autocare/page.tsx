@@ -13,20 +13,16 @@ export default async function AutocarePage() {
   const { autocareProducts, errMsg } = await getAutocareProducts();
 
   if (errMsg)
-    return (
-      <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
-    );
+    return <h1 className="flex justify-center items-center p-5">{errMsg}</h1>;
 
   if (!autocareProducts) {
     return (
-      <div className="mt-32 flex justify-center items-center p-5">
-        Loading...
-      </div>
+      <div className="flex justify-center items-center p-5">Loading...</div>
     ); // Render a loading indicator while fetching data
   }
 
   return (
-    <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
+    <div className="min-h-screen max-w-screen-2xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14">
       <div className="text-4xl relative h-32 md:h-72 md:text-5xl text-center w-full font-semibold">
         <div className="">
           <div className="bg-black h-32 md:h-72"></div>

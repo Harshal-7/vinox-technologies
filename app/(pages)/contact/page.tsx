@@ -77,7 +77,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-screen-2xl mx-auto mt-28 md:mt-32 p-6">
+    <div className="min-h-screen max-w-screen-2xl mx-auto p-6">
       <div className="text-3xl relative h-32 md:h-72 md:text-5xl text-center w-full font-semibold mb-10">
         <div className="">
           <div className="bg-black h-32 md:h-72 rounded-lg"></div>
@@ -224,7 +224,7 @@ const Contact = () => {
       </div>
 
       {/* MAP */}
-      {/* <div className="flex flex-col items-center gap-2 mx-auto mt-16 md:mt-32 mb-5">
+      {/* <div className="flex flex-col items-center gap-2 mx-auto mt-16 mb-5">
         <div>
           <Link
             href="https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu"

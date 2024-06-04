@@ -43,7 +43,7 @@ const products = [
   {
     title: "Toilet Cleaner",
     image_url: "homecare/i4fhrmhyawct0a8rxlfl",
-    href: "toiletCleaner",
+    href: "washroomCleaner",
   },
 ];
 
@@ -55,7 +55,7 @@ export default async function HomecarePage() {
   if (!products) return <h1>error fetching products</h1>;
 
   return (
-    <div className="min-h-screen max-w-screen-2xl m-auto mt-32 p-6 flex flex-col items-center gap-10 md:gap-14">
+    <div className="min-h-screen max-w-screen-2xl m-auto mt-5 p-6 flex flex-col items-center gap-10 md:gap-14">
       <div className="text-4xl relative h-32 md:h-72 md:text-5xl text-center w-full font-semibold">
         <div className="">
           <div className="bg-black h-32 md:h-72"></div>

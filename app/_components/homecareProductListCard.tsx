@@ -25,6 +25,7 @@ export const HomecareProductListCard: React.FC<
     <motion.div
       whileHover={{ scale: 1.02 }}
       className="md:min-h-96 flex flex-col cursor-pointer"
+      onClick={() => router.push(`/products/${category}/${href}`)}
     >
       <CldImage
         key={image_url}

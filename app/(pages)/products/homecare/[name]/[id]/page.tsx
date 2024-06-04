@@ -12,15 +12,11 @@ export default async function HomeCareProductDetails({
   );
 
   if (errMsg)
-    return (
-      <h1 className="mt-32 flex justify-center items-center p-5">{errMsg}</h1>
-    );
+    return <h1 className="flex justify-center items-center p-5">{errMsg}</h1>;
 
   if (!homecareProducts) {
     return (
-      <div className="mt-32 flex justify-center items-center p-5">
-        Loading...
-      </div>
+      <div className="flex justify-center items-center p-5">Loading...</div>
     ); // Render a loading indicator while fetching data
   }
 

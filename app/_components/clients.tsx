@@ -65,8 +65,6 @@ const OurClient = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:block" />
-          <CarouselNext className="hidden sm:block" />
         </Carousel>
       </div>
     </div>

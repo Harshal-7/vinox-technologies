@@ -12,6 +12,9 @@ import {
   ChevronDown,
   CornerDownRight,
   MessageCircle,
+  Link2,
+  Link2Icon,
+  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -140,10 +143,15 @@ export const Footer = () => {
         </div>
       </div>
       <hr className="h-[1px] my-8 bg-gray-900 border-0" />
-
-      <div className="flex items-center w-full justify-center text-center">
-        Copyright © 2024 | Designed & Developed By: Harshal Shinde
-      </div>
+    
+    <Link className="flex flex-col md:flex-row items-center w-full justify-center text-center group transition-all duration-500" href="https://harshalshinde.vercel.app/" target="_blank">
+      Copyright © 2024 | Designed & Developed By:
+      <span className="ml-1 bg-left-bottom bg-gradient-to-r group-hover:font-semibold  from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-in-out">
+        Harshal Shinde
+      </span>
+      <ExternalLink className="h-3.5 w-3.5 mt-1 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:block "/>
+    </Link>
+    
     </div>
   );
 };

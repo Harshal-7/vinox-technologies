@@ -7,7 +7,7 @@ export const Heading = () => {
   return (
     <div className="max-w-3xl space-y-4">
       <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
-        <span className="bg-gradient-to-r from-blue-800 to-blue-950 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-800 to-blue-900 bg-clip-text text-transparent">
           {" "}
           Vinox Technologies{" "}
         </span>

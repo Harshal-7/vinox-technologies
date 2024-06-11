@@ -38,7 +38,7 @@ export default async function AutocarePage() {
       </div>
 
       {/* flex flex-row gap-5 md:gap-10 flex-wrap mb-10 justify-center */}
-      <div className="grid grid-rows-1 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-10 md:flex-wrap mb-10 justify-center">
         {autocareProducts.map((product: any, index: number) => (
           <div key={index}>
             <AutocareListCard

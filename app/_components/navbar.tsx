@@ -79,7 +79,7 @@ export const Navbar = () => {
       className={`sticky top-0 z-[100] transition-shadow items-center w-full ${
         scrollPosition > 0
           ? "shadow-none"
-          : "shadow-sm bg-opacity-70 backdrop-blur-lg backdrop-filter"
+          : "shadow-sm bg-background"
       }`}
     >
       {/* Top Nav  */}
@@ -137,7 +137,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Bottom Nav  */}
-      <div className="py-3 md:py-3 md:px-6 text-black">
+      <div className="py-2 md:px-6 text-black">
         {/* Main Nav */}
         <div className="flex justify-between items-center list-none">
           <Button className="ml-5 md:ml-20 p-0" variant="link">
